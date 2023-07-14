@@ -1,0 +1,68 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(-0.000172615051, 0, -0.00144132972, 0)
+Frame.Size = UDim2.new(0, 400, 0, 200)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(50, 50, 50)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.Position = UDim2.new(0.0449999981, 0, 0.0300000012, 0)
+TextLabel.Size = UDim2.new(0, 363, 0, 38)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "Shark Script"
+TextLabel.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel.TextSize = 60.000
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextBox.BorderColor3 = Color3.fromRGB(100, 100, 100)
+TextBox.Position = UDim2.new(0.0274999999, 0, 0.275000006, 0)
+TextBox.Size = UDim2.new(0, 378, 0, 79)
+TextBox.Font = Enum.Font.Oswald
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextBox.TextSize = 50.000
+TextBox.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TextButton.Position = UDim2.new(0.0450000018, 0, 0.709999979, 0)
+TextButton.Size = UDim2.new(0, 363, 0, 50)
+TextButton.Font = Enum.Font.PermanentMarker
+TextButton.Text = "Execute Key"
+TextButton.TextColor3 = Color3.fromRGB(125, 125, 125)
+TextButton.TextSize = 55.000
+
+TextButton.MouseButton1Down:connect(function()
+    if TextBox.Text == "114514key" then
+        TextButton.TextColor3 = Color3.fromRGB(0, 170, 0)
+        wait(.5)
+        TextButton.TextColor3 = Color3.fromRGB(125, 125, 125)
+        print("不知道")
+        Frame.Visible   = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/sharksharksharkshark/bug-free-goggles/main/%E5%85%AC%E5%91%8A%EF%BC%9F.txt"))();
+    else
+        TextButton.TextColor3 = Color3.fromRGB(170, 0, 0)
+        wait(.5)
+        TextButton.TextColor3 = Color3.fromRGB(125, 125, 125)
+        print("lol")
+    end
+end)
